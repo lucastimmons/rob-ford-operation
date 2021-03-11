@@ -1,0 +1,112 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<style>
+	#bladder-text, #tumour-text{
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		border: #ffffff 2px;
+		width: 500px;
+		height: 200px;
+		top: 275px;
+		margin-left: 20px;
+		border-radius: 10px;
+		color: white;
+		display: none;
+	}
+	#bladder-text h2{
+		margin: 10px;
+		font-family: 'Fontdiner Swanky', sans-serif;
+		font-size: 24px;		
+	}
+	
+	#bladder-text p{
+		margin: 10px;	
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+	}
+	
+	#tumour-text h2{
+		margin: 10px;
+		font-family: 'Fontdiner Swanky', sans-serif;
+		font-size: 24px;		
+	}
+	
+	#tumour-text p{
+		margin: 10px;	
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+	}		
+	
+	#nose{
+	width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 178px;
+    left: 260px;
+    background-color: red;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px #f9ff80;
+    display: none;
+	}	
+	</style>
+</head>
+<body>
+	
+
+<img id="Image-Maps-Com-image-maps-2015-10-29-054915" src="holes2.png" border="0" width="540" height="972" orgWidth="540" orgHeight="972" usemap="#image-maps-2015-10-29-054915" alt="" />
+<map name="image-maps-2015-10-29-054915" id="ImageMapsCom-image-maps-2015-10-29-054915">
+
+<area id="bladder" alt="" title="" href="" shape="poly" coords="229,581,244,582,265,582,290,581,307,585,273,628,241,605,228,590" style="outline:none;" target="_self"/>
+
+<area id="tumour" alt="" title="" href="" shape="poly" coords="337,530,348,521,360,521,367,533,367,542,360,547,351,549,342,543" style="outline:none;" target="_self"/>
+
+</map>
+
+<div id="nose"></div>
+
+<div id="bladder-text">
+	<h2>Bladder Tumor</h2>
+	<p>A new tumour was found on Rob Ford's bladder in October. After suffering from abdominal pain, Ford checked into the Mount Sinai Hospital where his medical team found the tumour.</p><p>"At this time, we are still awaiting testing results to determine if it is related to the previous growths, as well as whether it is malignant," said a statement from Ford's office.</p>
+</div>
+
+<div id="tumour-text">
+	<h2>Abdominal liposarcoma</h2>
+	<p>Ford was diagnosed with a malignant liposarcoma in Sept. 2014. The liposarcoma arises in soft tissue structures and makes up about one per cent of cancers. After rounds chemotherapy the liposarcoma shrunk enough to be removed surgically in May 2015.</p>
+</div>
+
+<audio id="l">
+	<source src="audio/buzz.mp3"></source>
+	<source src="audio/buzz.ogg"></source>
+</audio>
+
+<script>
+
+var audio = $("#l")[0];
+
+
+$("#bladder").mouseover(function() {
+  $( "#bladder-text" ).fadeIn( 100 );
+  $( "#nose" ).fadeIn( 2 );
+  audio.play();});
+  
+$("#bladder").mouseout(function() {
+  $( "#bladder-text" ).fadeOut( 100 );
+  $( "#nose" ).fadeOut( 2 );});
+  
+$("#tumour").mouseover(function() {
+  $( "#tumour-text" ).fadeIn( 100 );
+  $( "#nose" ).fadeIn( 2 );
+    audio.play();});
+  
+$("#tumour").mouseout(function() {
+  $( "#tumour-text" ).fadeOut( 100 );
+  $( "#nose" ).fadeOut( 2 );});  
+  
+
+</script>
+
+</body>
+</html>
